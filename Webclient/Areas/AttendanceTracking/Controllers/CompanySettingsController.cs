@@ -73,10 +73,10 @@ namespace Webclient.Areas.AttendanceTracking.Controllers
             sb.Append(string.Format("<div>Your Password : {0}</div>", p));
 
             var recipient = new List<string> { email };
-            new Email(ConfigurationManager.AppSettings["EmailSender"],
+         /*   new Email(ConfigurationManager.AppSettings["EmailSender"],
                 ConfigurationManager.AppSettings["EmailSender"],
                 "Your User Credential of EMS portal", sb.ToString())
-                .SendEmail(recipient, ConfigurationManager.AppSettings["EmailSenderPassword"]);
+                .SendEmail(recipient, ConfigurationManager.AppSettings["EmailSenderPassword"]);*/
         }
 
 

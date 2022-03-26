@@ -80,11 +80,11 @@ namespace Webclient.Controllers.Api
             sb.Append(string.Format("<div>Your Login ID : {0}</div>", loginID));
             sb.Append(string.Format("<div>Your Password : {0}</div>", p));
 
-            var recipient = new List<string> { email };
+           /* var recipient = new List<string> { email };
             new Email(ConfigurationManager.AppSettings["EmailSender"],
                 ConfigurationManager.AppSettings["EmailSender"],
                 "Your User Credential", sb.ToString())
-                .SendEmail(recipient, ConfigurationManager.AppSettings["EmailSenderPassword"]);
+                .SendEmail(recipient, ConfigurationManager.AppSettings["EmailSenderPassword"]);*/
         }
 
 
