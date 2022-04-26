@@ -1,4 +1,4 @@
-﻿using Ems.BusinessTracker.Common.Models;
+﻿using Oas.BusinessTracker.Common.Models;
 using System;
 using System.Data;
 using System.Linq;
@@ -7,8 +7,8 @@ using Webclient.Controllers;
 using Webclient.Filters;
 using Webclient.Helpers;
 using Webclient.Models;
-using Ems.AttendanceTracking.Interfaces;
-using Ems.AttendanceTracking.Mappers;
+using Oas.AttendanceTracking.Interfaces;
+using Oas.AttendanceTracking.Mappers;
 
 namespace Webclient.Areas.AttendanceTracking.Controllers
 {

@@ -1,4 +1,4 @@
-﻿using Ems.BusinessTracker.Common;
+﻿using Oas.BusinessTracker.Common;
 using Microsoft.Reporting.WebForms;
 using QRCoder;
 using System;
@@ -8,8 +8,8 @@ using System.IO;
 using System.Linq;
 using System.Net;
 using System.Web.Mvc;
-using Ems.AttendanceTracking.Models;
-using Ems.AttendanceTracking.Services;
+using Oas.AttendanceTracking.Models;
+using Oas.AttendanceTracking.Services;
 using Webclient.Controllers;
 using Webclient.Filters;
 using Webclient.Helpers;

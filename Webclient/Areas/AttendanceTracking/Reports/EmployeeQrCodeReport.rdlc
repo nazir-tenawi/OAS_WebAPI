@@ -1264,10 +1264,10 @@
         </Field>
       </Fields>
       <rd:DataSetInfo>
-        <rd:DataSetName>Ems.AttendanceTracking.Services</rd:DataSetName>
+        <rd:DataSetName>Oas.AttendanceTracking.Services</rd:DataSetName>
         <rd:TableName>AttendanceReportBusiness</rd:TableName>
         <rd:ObjectDataSourceSelectMethod>GetQrCodeEmployee</rd:ObjectDataSourceSelectMethod>
-        <rd:ObjectDataSourceType>Ems.AttendanceTracking.Services.AttendanceReportBusiness, Ems.AttendanceTracking, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</rd:ObjectDataSourceType>
+        <rd:ObjectDataSourceType>Oas.AttendanceTracking.Services.AttendanceReportBusiness, Oas.AttendanceTracking, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</rd:ObjectDataSourceType>
       </rd:DataSetInfo>
     </DataSet>
     <DataSet Name="DataSet2">
@@ -1734,10 +1734,10 @@
         </Field>
       </Fields>
       <rd:DataSetInfo>
-        <rd:DataSetName>Ems.AttendanceTracking.Services</rd:DataSetName>
+        <rd:DataSetName>Oas.AttendanceTracking.Services</rd:DataSetName>
         <rd:TableName>AttendanceReportBusiness</rd:TableName>
         <rd:ObjectDataSourceSelectMethod>GetQrCodeEmployee</rd:ObjectDataSourceSelectMethod>
-        <rd:ObjectDataSourceType>Ems.AttendanceTracking.Services.AttendanceReportBusiness, Ems.AttendanceTracking, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</rd:ObjectDataSourceType>
+        <rd:ObjectDataSourceType>Oas.AttendanceTracking.Services.AttendanceReportBusiness, Oas.AttendanceTracking, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</rd:ObjectDataSourceType>
       </rd:DataSetInfo>
     </DataSet>
   </DataSets>

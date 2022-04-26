@@ -1,4 +1,4 @@
-﻿using Ems.BusinessTracker.Common;
+﻿using Oas.BusinessTracker.Common;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
@@ -12,9 +12,9 @@ using System.Net.Http;
 using System.Text;
 using System.Web;
 using System.Web.Http;
-using Ems.AttendanceTracking.Interfaces;
-using Ems.AttendanceTracking.Mappers;
-using Ems.AttendanceTracking.Models;
+using Oas.AttendanceTracking.Interfaces;
+using Oas.AttendanceTracking.Mappers;
+using Oas.AttendanceTracking.Models;
 
 namespace Webclient.Controllers.Api
 {
@@ -75,7 +75,7 @@ namespace Webclient.Controllers.Api
                 return;
 
             var sb = new StringBuilder();
-            sb.Append(string.Format("Below is your portal login credential.You can login to EMS portal."));
+            sb.Append(string.Format("Below is your portal login credential.You can login to OAS portal."));
             sb.Append(string.Format("<div></div>"));
             sb.Append(string.Format("<div>Your Login ID : {0}</div>", loginID));
             sb.Append(string.Format("<div>Your Password : {0}</div>", p));

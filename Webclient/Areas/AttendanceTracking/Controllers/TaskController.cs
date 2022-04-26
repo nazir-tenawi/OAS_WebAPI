@@ -1,5 +1,5 @@
-﻿using Ems.BusinessTracker.Common;
-using Ems.BusinessTracker.Common.Models;
+﻿using Oas.BusinessTracker.Common;
+using Oas.BusinessTracker.Common.Models;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -7,8 +7,8 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using System.Web.Script.Serialization;
-using Ems.AttendanceTracking.Models;
-using Ems.AttendanceTracking.Services;
+using Oas.AttendanceTracking.Models;
+using Oas.AttendanceTracking.Services;
 using Webclient.Controllers;
 using Webclient.Filters;
 using Webclient.Helpers;

@@ -1,10 +1,10 @@
-﻿using Ems.BusinessTracker.Common;
-using Ems.BusinessTracker.Common.Models;
+﻿using Oas.BusinessTracker.Common;
+using Oas.BusinessTracker.Common.Models;
 using System;
 using System.IO;
 using System.Linq;
 using System.Web.Mvc;
-using Ems.AttendanceTracking.Models;
+using Oas.AttendanceTracking.Models;
 using Webclient.Controllers;
 using Webclient.Filters;
 using Webclient.Helpers;
@@ -12,8 +12,8 @@ using Webclient.Models;
 using System.Web;
 using System.Collections.Generic;
 using System.Drawing.Imaging;
-using Ems.AttendanceTracking.Interfaces;
-using Ems.AttendanceTracking.Mappers;
+using Oas.AttendanceTracking.Interfaces;
+using Oas.AttendanceTracking.Mappers;
 using System.Text;
 using System.Configuration;
 using System.Drawing;
@@ -75,7 +75,7 @@ namespace Webclient.Areas.AttendanceTracking.Controllers
             var recipient = new List<string> { email };
          /*   new Email(ConfigurationManager.AppSettings["EmailSender"],
                 ConfigurationManager.AppSettings["EmailSender"],
-                "Your User Credential of EMS portal", sb.ToString())
+                "Your User Credential of OAS portal", sb.ToString())
                 .SendEmail(recipient, ConfigurationManager.AppSettings["EmailSenderPassword"]);*/
         }
 
