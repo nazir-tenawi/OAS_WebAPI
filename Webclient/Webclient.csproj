@@ -1679,11 +1679,11 @@
     <Content Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\EMS.AttendanceTracking\OAS.AttendanceTracking.csproj">
+    <ProjectReference Include="..\OAS.AttendanceTracking\Oas.AttendanceTracking.csproj">
       <Project>{247455C1-9B41-4B8F-8A92-E16BA39ECA59}</Project>
-      <Name>OAS.AttendanceTracking</Name>
+      <Name>Oas.AttendanceTracking</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Ems.BusinessTracker.Common\Oas.BusinessTracker.Common.csproj">
+    <ProjectReference Include="..\Oas.BusinessTracker.Common\Oas.BusinessTracker.Common.csproj">
       <Project>{6222D455-043F-4347-8F2C-1555CBEF6C99}</Project>
       <Name>Oas.BusinessTracker.Common</Name>
     </ProjectReference>

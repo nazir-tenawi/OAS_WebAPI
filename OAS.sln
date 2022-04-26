@@ -5,11 +5,11 @@ VisualStudioVersion = 17.1.32228.430
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Webclient", "Webclient\Webclient.csproj", "{590C99A8-9F55-42AF-A7F5-894C0B3BE7EE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OAS.AttendanceTracking", "EMS.AttendanceTracking\OAS.AttendanceTracking.csproj", "{247455C1-9B41-4B8F-8A92-E16BA39ECA59}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Oas.AttendanceTracking", "Oas.AttendanceTracking\Oas.AttendanceTracking.csproj", "{247455C1-9B41-4B8F-8A92-E16BA39ECA59}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Oas.BusinessTracker.Common", "Ems.BusinessTracker.Common\Oas.BusinessTracker.Common.csproj", "{6222D455-043F-4347-8F2C-1555CBEF6C99}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Oas.BusinessTracker.Common", "Oas.BusinessTracker.Common\Oas.BusinessTracker.Common.csproj", "{6222D455-043F-4347-8F2C-1555CBEF6C99}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Oas.BusinessTracker.DataAccess.Common", "Ems.BusinessTracker.DataAccess.Common\Oas.BusinessTracker.DataAccess.Common.csproj", "{7B5174CF-2703-47EF-93C9-3E5C2A2F5189}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Oas.BusinessTracker.DataAccess.Common", "Oas.BusinessTracker.DataAccess.Common\Oas.BusinessTracker.DataAccess.Common.csproj", "{7B5174CF-2703-47EF-93C9-3E5C2A2F5189}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

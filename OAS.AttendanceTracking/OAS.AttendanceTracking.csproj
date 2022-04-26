@@ -130,11 +130,11 @@
     <Compile Include="Services\TaskBusiness.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Ems.BusinessTracker.Common\Oas.BusinessTracker.Common.csproj">
+    <ProjectReference Include="..\Oas.BusinessTracker.Common\Oas.BusinessTracker.Common.csproj">
       <Project>{6222D455-043F-4347-8F2C-1555CBEF6C99}</Project>
       <Name>Oas.BusinessTracker.Common</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Ems.BusinessTracker.DataAccess.Common\Oas.BusinessTracker.DataAccess.Common.csproj">
+    <ProjectReference Include="..\Oas.BusinessTracker.DataAccess.Common\Oas.BusinessTracker.DataAccess.Common.csproj">
       <Project>{7B5174CF-2703-47EF-93C9-3E5C2A2F5189}</Project>
       <Name>Oas.BusinessTracker.DataAccess.Common</Name>
     </ProjectReference>

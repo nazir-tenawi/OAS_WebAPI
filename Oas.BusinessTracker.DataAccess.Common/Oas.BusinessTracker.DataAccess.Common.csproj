@@ -64,7 +64,7 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Ems.BusinessTracker.Common\Oas.BusinessTracker.Common.csproj">
+    <ProjectReference Include="..\Oas.BusinessTracker.Common\Oas.BusinessTracker.Common.csproj">
       <Project>{6222D455-043F-4347-8F2C-1555CBEF6C99}</Project>
       <Name>Oas.BusinessTracker.Common</Name>
     </ProjectReference>
