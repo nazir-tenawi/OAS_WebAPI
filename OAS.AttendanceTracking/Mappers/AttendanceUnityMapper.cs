@@ -18,8 +18,6 @@ namespace Oas.AttendanceTracking.Mappers
             container.RegisterType<IDepartment, DepartmentDataAccess>(new ContainerControlledLifetimeManager());
             container.RegisterType<IDesignation, DesignationDataAccess>(new ContainerControlledLifetimeManager());
             container.RegisterType<ILeavePolicy, LeavePolicyDataAccess>(new ContainerControlledLifetimeManager());
-            container.RegisterType<INoticeBoard, NoticeBoardDataAccess>(new ContainerControlledLifetimeManager());
-            container.RegisterType<ITask, TaskDataAccess>(new ContainerControlledLifetimeManager());
             container.RegisterType<IEmployee, EmployeeDataAccess>(new ContainerControlledLifetimeManager());
             container.RegisterType<IAttendance, AttendanceDataAccess>(new ContainerControlledLifetimeManager());
             container.RegisterType<ILeave, LeaveDataAccess>(new ContainerControlledLifetimeManager());

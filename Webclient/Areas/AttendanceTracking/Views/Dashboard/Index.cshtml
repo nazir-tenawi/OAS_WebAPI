@@ -58,46 +58,7 @@
     </div>
     <div style="margin-top:50px"></div>
 
-    <div class="row">
-        <div class="col-md-6">
-            <div class="card" style="height:285px;overflow-y:auto">
-                <div class="card-content" ng-init="LoadNoticeBoard()">
-                    <div class="card-body">
-                        <h4 class="card-title">Notices</h4>
-                    </div>
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item" ng-repeat="x in NoticeList">
-                            <span ng-if="x.NoticeId%5==1" class="badge badge-pill bg-light float-right">{{x.PostingDateVw}}</span>
-                            <span ng-if="x.NoticeId%5==2" class="badge badge-pill bg-info float-right">{{x.PostingDateVw}}</span>
-                            <span ng-if="x.NoticeId%5==3" class="badge badge-pill bg-success float-right">{{x.PostingDateVw}}</span>
-                            <span ng-if="x.NoticeId%5==4" class="badge badge-pill bg-warning float-right">{{x.PostingDateVw}}</span>
-                            <span ng-if="x.NoticeId%5==0" class="badge badge-pill bg-danger float-right">{{x.PostingDateVw}}</span>
-                            {{x.Details}}
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-6">
-            <div class="card" style="height:285px;overflow-y:auto">
-                <div class="card-content" ng-init="LoadDocExpiryCount()">
-                    <div class="card-body">
-                        <h4 class="card-title">Expiry Details</h4>
-                    </div>
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item" ng-repeat="x in DocExpiryList">
-                            <span ng-if="x.Name=='Expired'" class="badge badge-pill bg-danger float-right" style="cursor:pointer;text-decoration:underline" ng-click="HealthCardExpired(x.Name)">{{x.HealthCard}}</span>
-                            <span ng-if="x.Name=='Expiring in 90 days'" class="badge badge-pill bg-info float-right" style="cursor:pointer;text-decoration:underline" ng-click="HealthCardExpired(x.Name)">{{x.HealthCard}}</span>
-                            <span ng-if="x.Name=='Expiring in 60 days'" class="badge badge-pill bg-success float-right" style="cursor:pointer;text-decoration:underline" ng-click="HealthCardExpired(x.Name)">{{x.HealthCard}}</span>
-                            <span ng-if="x.Name=='Expiring in 30 days'" class="badge badge-pill bg-warning float-right" style="cursor:pointer;text-decoration:underline" ng-click="HealthCardExpired(x.Name)">{{x.HealthCard}}</span>
-                            {{x.Name}}
-                        </li>
-                    </ul>
-                </div>
-            </div>
-
-        </div>
-    </div>
+    <div class="row"></div>
 
 </section>
 

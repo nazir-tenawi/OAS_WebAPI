@@ -98,18 +98,6 @@ namespace Webclient.Areas.AttendanceTracking.Controllers
 
             return Json(listOfData, JsonRequestBehavior.AllowGet);
         }
-       
-        [HttpGet]
-        public JsonResult GetNoticeBoard()
-        {
-            var query = new NoticeBoardBusiness().GetAll(_userInfo.CompanyId ?? 0).AsQueryable();
-            int i = 0;
-            foreach (var item in query)
-            {
-                item.NoticeId = ++i;
-            }
-            return Json(query, JsonRequestBehavior.AllowGet);
-        }
 
         [HttpGet]
         public JsonResult GetAttendanceFeed()

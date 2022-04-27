@@ -237,8 +237,6 @@
     <Compile Include="Areas\AttendanceTracking\AttendanceTrackingAreaRegistration.cs" />
     <Compile Include="Areas\AttendanceTracking\Controllers\Api\AttendanceAccountApiController.cs" />
     <Compile Include="Areas\AttendanceTracking\Controllers\Api\LeaveApiController.cs" />
-    <Compile Include="Areas\AttendanceTracking\Controllers\Api\TaskApiController.cs" />
-    <Compile Include="Areas\AttendanceTracking\Controllers\Api\NoticeApiController.cs" />
     <Compile Include="Areas\AttendanceTracking\Controllers\Api\EmployeeAttendanceApiController.cs" />
     <Compile Include="Areas\AttendanceTracking\Controllers\Api\AttendanceProfileDetailsApiController.cs" />
     <Compile Include="Areas\AttendanceTracking\Controllers\AttendanceReportController.cs" />
@@ -293,8 +291,6 @@
     <Content Include="Areas\AttendanceTracking\scripts\attendanceReportController.js" />
     <Content Include="Areas\AttendanceTracking\scripts\holidayController.js" />
     <Content Include="Areas\AttendanceTracking\scripts\portalUserController.js" />
-    <Content Include="Areas\AttendanceTracking\scripts\taskController.js" />
-    <Content Include="Areas\AttendanceTracking\scripts\noticeBoardController.js" />
     <Content Include="Areas\AttendanceTracking\scripts\leavePolicyController.js" />
     <Content Include="Areas\AttendanceTracking\scripts\setupController.js" />
     <Content Include="Areas\AttendanceTracking\scripts\userCreation.js" />
@@ -919,9 +915,6 @@
     <Content Include="Content\vendors\js\ui\screenfull.min.js" />
     <Content Include="Content\vendors\js\ui\unison.min.js" />
     <Content Include="Content\vendors\js\vendors.min.js" />
-    <Content Include="DbScripts\EMS.sql" />
-    <Content Include="DbScripts\FullScript.sql" />
-    <Content Include="DbScripts\Schema.sql" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="jqGrid\css\ui.jqgrid.css" />
@@ -1171,7 +1164,6 @@
     <Content Include="Areas\AttendanceTracking\Views\LeavePolicy\Index.cshtml" />
     <Content Include="Areas\AttendanceTracking\Views\MasterDataSetup\Create.cshtml" />
     <Content Include="Areas\AttendanceTracking\Views\MasterDataSetup\Index.cshtml" />
-    <Content Include="Areas\AttendanceTracking\Content\employeeuploadfile.xlsx" />
     <Content Include="Areas\AttendanceTracking\Views\NoticeBoard\Create.cshtml" />
     <Content Include="Areas\AttendanceTracking\Views\NoticeBoard\Index.cshtml" />
     <Content Include="Areas\AttendanceTracking\Views\Task\Create.cshtml" />
@@ -1670,7 +1662,9 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Areas\AttendanceTracking\Content\" />
     <Folder Include="Areas\AttendanceTracking\Data\" />
+    <Folder Include="DbScripts\" />
     <Folder Include="UploadFiles\" />
   </ItemGroup>
   <ItemGroup>
@@ -1690,7 +1684,6 @@
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\employeeuploadfile.xlsx" />
     <Content Include="Content\material_font.woff2" />
     <Content Include="Content\montserrat\Montserrat-Bold.ttf" />
     <Content Include="Content\montserrat\Montserrat-Regular.ttf" />
@@ -1707,9 +1700,6 @@
     <Content Include="Scripts\jquery-ui-1.12.1\package.json" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Areas\AttendanceTracking\Reports\EmployeeQrCodeReport.rdlc">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
     <Content Include="Areas\AttendanceTracking\Reports\Report2.rdlc">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
