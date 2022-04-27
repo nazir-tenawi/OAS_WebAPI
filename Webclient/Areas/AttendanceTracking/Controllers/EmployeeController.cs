@@ -28,11 +28,6 @@ namespace Webclient.Areas.AttendanceTracking.Controllers
             return View();
         }
 
-        public ActionResult BulkUpload()
-        {
-            return View();
-        }
-
         public ActionResult Create()
         {
             return PartialView();

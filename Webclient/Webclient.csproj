@@ -252,10 +252,7 @@
     <Compile Include="Areas\AttendanceTracking\Controllers\LeaveController.cs" />
     <Compile Include="Areas\AttendanceTracking\Controllers\LeavePolicyController.cs" />
     <Compile Include="Areas\AttendanceTracking\Controllers\EmployeeLocationMapController.cs" />
-    <Compile Include="Areas\AttendanceTracking\Controllers\MasterDataSetupController.cs" />
     <Compile Include="Areas\AttendanceTracking\Controllers\DashboardController.cs" />
-    <Compile Include="Areas\AttendanceTracking\Controllers\TaskController.cs" />
-    <Compile Include="Areas\AttendanceTracking\Controllers\NoticeBoardController.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\Api\BaseApiController.cs" />
     <Compile Include="Controllers\Api\AccountApiController.cs" />
