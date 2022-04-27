@@ -66,18 +66,6 @@
                     <li class="nav-item">
                         <a class="nav-link" id="home-tab" ng-class="{ active : ActiveTab == 1 }" data-toggle="tab" ng-click="ActiveTab=1" role="tab" aria-controls="home" aria-selected="true">Basic Info</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" id="profile-tab" ng-class="{ active : ActiveTab == 2 }" data-toggle="tab" ng-click="ActiveTab=2" role="tab" aria-controls="profile" aria-selected="false">Registration</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" id="contact-tab" ng-class="{ active : ActiveTab == 3 }" data-toggle="tab" ng-click="ActiveTab=3" role="tab" aria-controls="contact" aria-selected="false">License</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" id="contact-tab" ng-class="{ active : ActiveTab == 4 }" data-toggle="tab" ng-click="ActiveTab=4" role="tab" aria-controls="contact" aria-selected="false">Establishment</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" id="contact-tab" ng-class="{ active : ActiveTab == 5 }" data-toggle="tab" ng-click="ActiveTab=5" role="tab" aria-controls="contact" aria-selected="false">Others</a>
-                    </li>
                 </ul>
             </div>
 
@@ -151,20 +139,6 @@
                                         <label class="col-sm-5 control-label" style="float:left">Admin Password<span class="required-field">*</span></label>
                                         <div class="col-sm-7" style="float:left">
                                             <input type="text" class="form-control validator" maxlength="8" ng-model="BusinessModel.AdminAssignedPassword" required />
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div style="margin-top:5px" class="row">
-                                <div class="col-sm-12">
-                                    <div class="form-group">
-                                        <label class="col-sm-10 control-label">Do you want multiple devices to login to the app for employee?</label>
-                                        <div class="col-sm-2">
-                                            <label class="switch switch-primary">
-                                                <input type="checkbox" class="switch-input" ng-model="BusinessModel.IsMultipleDevieAllow" />
-                                                <span data-off="No" data-on="Yes" class="switch-label"></span>
-                                                <span class="switch-handle"></span>
-                                            </label>
                                         </div>
                                     </div>
                                 </div>
