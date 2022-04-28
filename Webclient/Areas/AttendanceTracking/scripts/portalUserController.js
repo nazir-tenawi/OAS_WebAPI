@@ -130,29 +130,6 @@ medicareApp.controller("portalUserController", ['$scope', '$uibModal', 'portalUs
         });
     }
 
-    $scope.removeRegisteredDevice = function (uId) {
-        $.confirm({
-            title: 'Confirmation required',
-            content: 'Do you really want to remove registered device for new device registration?',
-            buttons: {
-                ok: {
-                    action: function () {
-                        portalUserFactory.RemoveDevice(uId).then(function (response) {
-                            if (response.data.Success) {
-                                showMessage("Successfulle remove registered device for the user", "success");
-                                reloadHistoryList();
-                            } else {
-                                showMessage("something is wrong", "error");
-                            }
-                        });
-                    }
-                },
-                cancel: function () {
-                    // nothing to do
-                }
-            }
-        });
-    }
 
    
 

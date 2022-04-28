@@ -154,44 +154,7 @@ medicareApp.controller("employeeController", ['$scope', '$uibModal', 'employeeFa
     };
 
 
-    $scope.uploadEmployeeBatchExcelFile = function (isValidateEmpCode) {
 
-        var fileUpload = $("#employeeBatchExcel").get(0);
-        var files = fileUpload.files;
-        if (files.length <= 0) {
-            showMessage("Please select a file.", 'error');
-            $('#divWrapper').loader('hide');
-            return;
-        }
-        $('#divWrapper').loader('show');
-        var data = new FormData();
-        for (var i = 0; i < files.length; i++) {
-            data.append(files[i].name, files[i]);
-        }
-        $.ajax({
-            type: "POST",
-            url: "/AttendanceTracking/Employee/UploadEmployeeBatchExcelFile",
-            contentType: false,
-            processData: false,
-            data: data,
-            success: function (response) {
-                $("#employeeBatchExcel").val("");
-                $('#divWrapper').loader('hide');
-                reloadList();
-            },
-            error: function () {
-                $('#divWrapper').loader('hide');
-                //alert("There was error uploading files!");
-            }
-        });
-    };
-
-    $scope.employeeExportToExcel = function (op) {
-        if (validateForm("previewInfo")) {
-            var search = $("#gridList").jqGrid('getGridParam', 'postData');
-            window.location = "/Employee/ExportEmployeeList?_search=" + search._search + "&nd=" + search.nd + "&rows=" + search.rows + "&page=" + search.page + "&sidx=" + search.sidx + "&sord=" + search.sord + "&filters=" + search.filters;
-        }
-    }
     $scope.uploadEmpImage = function () {
         var fileUpload = $("#empImageData").get(0);
         var files = fileUpload.files;

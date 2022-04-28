@@ -135,16 +135,6 @@ namespace Webclient.Controllers
             return File(renderedBytes, mimeType);
         }
 
-        protected void ExportToExcelAsFormated<T>(List<T> list, string reportName, string title)
-        {
-            var fileName = "filename=" + reportName + ".xls";
-            Response.ClearContent();
-            Response.AddHeader("content-disposition", "attachment; " + fileName);
-            Response.ContentType = "application/ms-excel";
-            Response.Charset = "";
-            WriteHtmlTable(list, Response.Output, title);
-            Response.End();
-        }
 
         private void WriteHtmlTable<T>(IEnumerable<T> data, TextWriter output, string title)
         {

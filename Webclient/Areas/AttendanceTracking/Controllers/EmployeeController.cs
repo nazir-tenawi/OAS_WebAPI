@@ -1,6 +1,5 @@
 ﻿using Oas.BusinessTracker.Common;
 using Oas.BusinessTracker.Common.Models;
-using Excel;
 using System;
 using System.Data;
 using System.IO;
@@ -64,7 +63,6 @@ namespace Webclient.Areas.AttendanceTracking.Controllers
 
             var listOfFilteredRequest = FilterHelper.JQGridFilter(employeeList.AsQueryable(), grid).ToList();
 
-            ExportToExcelAsFormated(listOfFilteredRequest.OrderBy(x=>x.SerialNo).ToList(), "Employee_List_" + DateTime.Now, null);
         }
 
         [HttpPost]
@@ -85,89 +83,6 @@ namespace Webclient.Areas.AttendanceTracking.Controllers
         {
             var response = _eBusiness.Delete(id);
             return Json(response, JsonRequestBehavior.AllowGet);
-        }
-
-        [HttpPost]
-        public ActionResult UploadEmployeeBatchExcelFile()
-        {
-            var response = new ResponseModel();
-            if (Request.Files.AllKeys.Any())
-            {
-                var httpPostedFile = Request.Files[0];
-                var fileExtension = Path.GetExtension(httpPostedFile.FileName);
-
-                if (fileExtension != ".xlsx")
-                {
-                    response.Message = "File format is not supported";
-                    return Json(response, JsonRequestBehavior.AllowGet);
-                }
-
-                if (httpPostedFile != null)
-                {
-                    try
-                    {
-                        IExcelDataReader excelReader = ExcelReaderFactory.CreateOpenXmlReader(httpPostedFile.InputStream);
-                        response = UpdateUploadedFileData(excelReader);
-                        excelReader.Close();
-                    }
-                    catch (Exception e)
-                    {
-                        response.Message = e.Message;
-                    }
-                }
-            }
-            return Json(response, JsonRequestBehavior.AllowGet);
-        }
-
-        private ResponseModel UpdateUploadedFileData(IExcelDataReader excelReader)
-        {
-            var response = new ResponseModel();
-            DataSet result = excelReader.AsDataSet();
-            DataTable Dt = result.Tables[0];
-
-            for (int i = 1; i < Dt.Rows.Count; i++)
-            {
-                try
-                {
-
-                DataRow row = Dt.Rows[i];
-                int columnCount = Dt.Columns.Count;
-                string[] columns = new string[columnCount];
-                for (int j = 0; j < columnCount; j++)
-                {
-                    if (Dt.Columns[j].DataType == typeof(Object))
-                    {
-                        try
-                        {
-                            columns[j] = Convert.ToDateTime(row[j]).ToString();
-                        }
-                        catch (Exception)
-                        {
-                            columns[j] = row[j].ToString();
-                        }
-                    }
-                    else
-                    {
-                        columns[j] = row[j].ToString();
-                    }
-                    if (columns[0].Trim() == "EMP NO")
-                        continue;
-
-                    if (string.IsNullOrEmpty(columns[0].Trim()))
-                        break;
-                }
-                if (string.IsNullOrEmpty(columns[0].Trim()))
-                    break;
-
-                response = _eBusiness.UpdateEmployeeBatchFile(columns,_userInfo.CompanyId);
-                }
-                catch (Exception ex)
-                {
-
-                }
-            }
-           
-            return response;
         }
         [HttpPost]
         public ActionResult UploadEmployeeImage(int empId)

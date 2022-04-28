@@ -71,12 +71,6 @@
         jQuery("#gridList").jqGrid('filterToolbar', { stringResult: true, searchOnEnter: true, defaultSearch: "cn" });
     };
 
-    var removeRegisteredDevice = function (id) {
-        angular.element('#divWrapper').scope().removeRegisteredDevice(id);
-        angular.element('#divWrapper').scope().$apply();
-    };
-    function editFomatter(cellvalue, options, rowObject) {
-      return "<a style='color:blue' class='pointer' onclick=\"removeRegisteredDevice('" + rowObject.Id + "')\">Remove Device</a>";
-    }
+
 
 </script>

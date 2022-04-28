@@ -31,10 +31,6 @@ namespace Webclient.Areas.AttendanceTracking.Controllers
         {
             return View();
         }
-        public ActionResult GenerateQrCode()
-        {
-            return View();
-        }
         public ActionResult Create()
         {
             return PartialView();
@@ -69,78 +65,7 @@ namespace Webclient.Areas.AttendanceTracking.Controllers
             }).ToList().OrderBy(c => c.Name);
             return Json(textValueInputHelpList, JsonRequestBehavior.AllowGet);
         }
-        public ActionResult GenerateQrCodeToPdf(string model)
-        {
-            List<string> EmployeeIdList;
-            EmployeeIdList = model.Split(',').ToList();
-            int pdfSerialNo = 1;
 
-            var empList = new AttendanceReportBusiness().GetQrCodeEmployee();
-
-            var qrCodeModel = new List<EmployeeExportModel>();
-
-            foreach (var item in EmployeeIdList)
-            {
-                var data = empList.Where(x => x.Id == Convert.ToInt64(item)).FirstOrDefault();
-
-                data.PdfSerialNo = pdfSerialNo;
-                if (string.IsNullOrEmpty(data.QrCodeNo))
-                {
-                    data.QrCodeNo = item;
-                    _setupBusiness.UpdateQrCode(data);
-                }
-
-                QRCodeGenerator qrGenerator = new QRCodeGenerator();
-                QRCodeData qrCodeData = qrGenerator.CreateQrCode(data.QrCodeNo, QRCodeGenerator.ECCLevel.Q);
-                QRCode qrCode = new QRCode(qrCodeData);
-                using (Bitmap bitMap = qrCode.GetGraphic(20))
-                {
-                    using (MemoryStream ms = new MemoryStream())
-                    {
-                        bitMap.Save(ms, System.Drawing.Imaging.ImageFormat.Png);
-                        byte[] byteImage = ms.ToArray();
-                        data.QrCode = byteImage;
-                    }
-                }
-                pdfSerialNo += 1;
-
-                string imageUrl = data.ImagePath;
-                
-                if(!string.IsNullOrEmpty(data.ImageFileName))
-                {
-                    using (var webClient = new WebClient())
-                    {
-                        try
-                        {
-                            data.EmployeeImageData = webClient.DownloadData(imageUrl);
-                        }
-                        catch(Exception e)
-                        {
-                            
-                        }
-                    }
-                }
-                
-                qrCodeModel.Add(data);
-            }
-            return QrCodePdf(qrCodeModel);
-        }
-
-        private ActionResult QrCodePdf(List<EmployeeExportModel> printableLists)
-        {
-            int reminder = 0;
-            int totalRecords = printableLists.Count();
-            if ((totalRecords % 2)==1)
-                reminder += 1;
-            int perDataSetRecord = (totalRecords / 2)+reminder;
-
-            var localReport = new LocalReport { ReportPath = Server.MapPath("~/Areas/AttendanceTracking/Reports/EmployeeQrCodeReport.rdlc") };
-
-            localReport.DataSources.Add(new ReportDataSource("DataSet1", printableLists.Take(perDataSetRecord)));
-            localReport.DataSources.Add(new ReportDataSource("DataSet2", printableLists.Skip(perDataSetRecord).Take(perDataSetRecord + 2)));
-
-            return ViewReportFormat(localReport);
-        }
         [HttpPost]
         public ActionResult SaveInputHelp(SetupInputHelpModel model)
         {

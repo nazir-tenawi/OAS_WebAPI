@@ -48,30 +48,6 @@ namespace Webclient.Areas.AttendanceTracking.Controllers
             };
             return Json(result, JsonRequestBehavior.AllowGet);
         }
-        public void ExpiryReportExportToExcel(int expiryId)
-        {
-            int? cId = _userInfo.CompanyId.HasValue && _userInfo.CompanyId.Value > 0 ? _userInfo.CompanyId.Value : (int?)null;
-            var query = _attendance.GetExpiryReports(expiryId, cId).AsQueryable();
-            ExportToExcelAsFormated(ToExpiryExcelModel(query.ToList()), "Expiry_Report_Lists_" + DateTime.UtcNow + "_" + DateTime.UtcNow.Millisecond, null);
-        }
-        private List<EmployeeDocExpiryReportModel> ToExpiryExcelModel(List<EmployeeDetailsModel> list)
-        {
-            return (from item in list
-                    select new EmployeeDocExpiryReportModel
-                    {
-                        EmployeeCode = item.EmployeeCode,
-                        EmployeeName = item.EmployeeName,
-                        MobileNo = item.MobileNo,
-                        PassportNo = item.PassportNo,
-                        PassportExpiryDateVw = item.PassportExpiryDateVw,
-                        QID = item.QID,
-                        QIDExpiryDateVw = item.QIDExpiryDateVw,
-                        VisaNo = item.VisaNo,
-                        VisaExpirayDate = item.VisaExpiryDateVw,
-                        HealthCardNo = item.HealthCardNo,
-                        HealthCardExpiryVw = item.HealthCardExpiryVw
-                    }).ToList();
-        }
 
         [HttpGet]
         public JsonResult GetLeaveStatus()

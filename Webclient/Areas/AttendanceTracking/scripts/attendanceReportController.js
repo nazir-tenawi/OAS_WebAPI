@@ -72,17 +72,8 @@ medicareApp.controller("attendanceReportController", ['$scope', '$uibModal', 'at
             $("#monthlyGridList").jqGrid('setGridParam', { data: $scope.ReportData, datatype: 'local' }).trigger('reloadGrid');
         });
     };
-    $scope.MonthlyAttendanceReportExportToExcel = function (monthId, yearId) {
-        window.location = "/AttendanceTracking/AttendanceReport/MonthlyAttendanceReportExportToExcel?monthId=" + monthId + '&yearId=' + yearId;
-    };
-    $scope.EmployeeMonthlyAttendanceReportExportToExcel = function () {
-        window.location = "/AttendanceTracking/AttendanceReport/EmployeeMonthlyAttendanceReportExportToExcel?employeeId=" + $scope.EmployeeUserId + '&monthId=' + $scope.EmployeeMonth + '&yearId=' + $scope.EmployeeYear;
-    };
     $scope.GetMonthlyAttendanceReports = function () {
         getMonthlyDetails('/AttendanceTracking/AttendanceReport/GetMonthlyUserReports?employeeId=' + $scope.EmployeeUserId + '&monthId=' + $scope.EmployeeMonth + '&yearId=' + $scope.EmployeeYear);
-    };
-    $scope.AllReportExportToExcel = function (monthId, yearId) {
-        window.location = "/AttendanceTracking/AttendanceReport/AllUserReportExportToExcel?monthId=" + monthId + '&yearId=' + yearId;
     };
     $scope.GetAllReportList = function (monthId, yearId) {
         attendanceReportFactory.GetAllUserReports(monthId, yearId).then(function (response) {

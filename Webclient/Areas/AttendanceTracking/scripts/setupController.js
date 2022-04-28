@@ -63,25 +63,6 @@ medicareApp.controller("setupController", ['$scope', '$uibModal', 'setupFactory'
         });
         return notFound;
     };
-    $scope.GenerateQrCode = function () {
-
-        var model = [];
-
-        var selectedRows = $('#employeeQrList').jqGrid("getGridParam", 'selarrrow');
-        
-        for (var i = 0; i < selectedRows.length; i++) {
-
-            var selectedRowData = $('#employeeQrList').getRowData(selectedRows[i]);
-            
-            model.push(selectedRowData.Id);
-        }
-        if (model.length > 0) {
-            window.open("/AttendanceTracking/MasterDataSetup/GenerateQrCodeToPdf?model=" + model, "_blank");
-        }
-        else {
-            showMessage("Please check at least one checkbox", "error");
-        }
-    };
     $scope.ViewEmployee = function (id) {
         $scope.Employee = {};
 
