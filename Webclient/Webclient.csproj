@@ -493,7 +493,7 @@
     <Content Include="Content\images\icon_pdf.png" />
     <Content Include="Content\images\login_bg.png" />
     <Content Include="Content\images\logo.png" />
-    <Content Include="Content\images\Logo_EMS.png" />
+    <Content Include="Content\images\Logo_OAS.png" />
     <Content Include="Content\images\main_login_bg.jpg" />
     <Content Include="Content\images\module_attendance.png" />
     <Content Include="Content\images\module_um.png" />

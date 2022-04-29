@@ -7,8 +7,8 @@
     <ProjectGuid>{6222D455-043F-4347-8F2C-1555CBEF6C99}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Ems.BusinessTracker.Common</RootNamespace>
-    <AssemblyName>Ems.BusinessTracker.Common</AssemblyName>
+    <RootNamespace>Oas.BusinessTracker.Common</RootNamespace>
+    <AssemblyName>Oas.BusinessTracker.Common</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <SccProjectName>SAK</SccProjectName>
